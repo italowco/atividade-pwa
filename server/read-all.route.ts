@@ -10,7 +10,7 @@ export function readAll(req, res) {
 
 export function readAllCategories(req, res) {
 
-  res.status(200).json({products:db.readCategories()});
+  res.status(200).json({categories:db.readCategories()});
 
 }
 

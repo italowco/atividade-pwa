@@ -3,12 +3,11 @@
 
 
     <button  mat-raised-button color="primary" (click)="loadCategories()">
-      Reload Lessons
+      Reload Categories
     </button>
   </div>
 
   <h2>All categories</h2>
-
   <mat-selection-list #category>
     <mat-list-option  *ngFor="let category of categories | async" role="listitem">
       {{ category.name }}

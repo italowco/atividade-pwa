@@ -1,6 +1,9 @@
 <mat-drawer-container color="primary" class="example-container">
   <mat-drawer color="secondary" #sidenav mode="side" closed>
     <mat-list color="primary">
+      <mat-list-item routerLink="/home">Home </mat-list-item>
+    </mat-list>
+    <mat-list color="primary">
       <mat-list-item routerLink="/products">Products </mat-list-item>
     </mat-list>
     <mat-list color="primary">
@@ -12,7 +15,7 @@
       <button mat-icon-button mat-button (click)="sidenav.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
-      <span>PWA SHOP - V4</span>
+      <span>PWA SHOP</span>
       <span class="example-spacer"></span>
       <button
         mat-icon-button
@@ -31,12 +34,7 @@
     </mat-toolbar>
 
     <div class="buttons">
-
-      <button mat-raised-button color="primary"  (click)="subscribeToNotifications()"
-              [disabled]="sub">Subscribe</button>
-
-      <button mat-raised-button color="secondary"  (click)="sendNewsletter()">Send</button>
-
+      <h1></h1>
     </div>
     <router-outlet></router-outlet>
   </mat-drawer-content>

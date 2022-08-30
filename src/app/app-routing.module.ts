@@ -21,6 +21,11 @@ const routes: Routes = [
             (m) => m.CategoriesModule
           ),
       },
+      {
+        path: 'home',
+        loadChildren: () =>
+          import('./home/home.module').then((m) => m.HomeModule),
+      },
     ],
   },
 ];

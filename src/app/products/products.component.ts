@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ProductsService } from './products.service';
 import { Observable, of } from 'rxjs';
 import { Product } from '../model/product';
-import { SwPush } from '@angular/service-worker';
 import { catchError } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
 import { NewsletterService } from '../services/newsletter.service';
@@ -21,8 +20,6 @@ export class ProductsComponent implements OnInit {
 
   constructor(
     private productsService: ProductsService,
-    private swPush: SwPush,
-    private newsletterService: NewsletterService
   ) {}
 
   ngOnInit() {

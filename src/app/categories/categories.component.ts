@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { CategoriesService } from './categories.service';
 import { Observable, of } from 'rxjs';
 import { Category } from '../model/category';
-import { SwPush } from '@angular/service-worker';
 import { NewsletterService } from '../services/newsletter.service';
 
 @Component({
@@ -15,7 +14,6 @@ export class CategoriesComponent implements OnInit {
 
   constructor(
     private categoriesService: CategoriesService,
-    private swPush: SwPush,
     private newsletterService: NewsletterService
   ) {}
 

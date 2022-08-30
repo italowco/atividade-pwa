@@ -17,13 +17,13 @@ export class CategoriesService {
     }
 
     loadAll() : Observable<Category[]> {
-        return this.http.get<any>(`${this.url}/api/categories`).pipe(map(res => {
+        return this.http.get<any>(`${this.url}/api/category`).pipe(map(res => {
           return res.categories;
         } ));
     }
 
     findById(id:number) {
-        return this.http.get<Category>(`${this.url}/api/categories/` + id);
+        return this.http.get<Category>(`${this.url}/api/category/` + id);
     }
 
 }
