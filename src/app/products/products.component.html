@@ -1,0 +1,18 @@
+<div class="products-list-container v-h-center-block-parent">
+  <div class="buttons">
+
+
+    <button  mat-raised-button color="primary" (click)="loadLessons()">
+      Reload Lessons
+    </button>
+  </div>
+
+  <h2>All products</h2>
+
+  <mat-selection-list #product>
+    <mat-list-option  *ngFor="let product of products | async" role="listitem">
+      {{ product.description }}
+    </mat-list-option>
+
+  </mat-selection-list>
+</div>

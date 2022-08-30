@@ -1,0 +1,18 @@
+<div class="categories-list-container v-h-center-block-parent">
+  <div class="buttons">
+
+
+    <button  mat-raised-button color="primary" (click)="loadCategories()">
+      Reload Lessons
+    </button>
+  </div>
+
+  <h2>All categories</h2>
+
+  <mat-selection-list #category>
+    <mat-list-option  *ngFor="let category of categories | async" role="listitem">
+      {{ category.name }}
+    </mat-list-option>
+
+  </mat-selection-list>
+</div>
